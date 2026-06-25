@@ -1,0 +1,27 @@
+---
+description: Laravel starter stack — Catalyst UI, Breeze (Inertia + React), and conventions
+alwaysApply: true
+---
+
+# Starter Stack Conventions
+
+This project is a Laravel starter with **Catalyst UI Kit** and **Laravel Breeze (Inertia + React)**.
+
+## Stack
+
+- **Backend**: Laravel; auth via Breeze (routes, controllers, middleware).
+- **Frontend**: Inertia.js + React 19; single entry `resources/js/app.jsx`; pages in `resources/js/Pages/`, layouts in `resources/js/Layouts/`.
+- **UI**: Catalyst components live in `resources/catalyst-ui-kit/javascript/`. Import from `@/catalyst/<component>` (e.g. `import { Button } from '@/catalyst/button'`). Do not move or duplicate Catalyst source; customize in place or extend in `resources/js/Components/` if needed.
+
+## Conventions
+
+- **Links**: Use Catalyst's Link (it wraps Inertia's Link) for in-app navigation so overlays close correctly. Import from `@/catalyst/text` for `TextLink`, or use `Link` from `@/catalyst/link` where a raw link is needed.
+- **Auth pages**: Keep Breeze's form logic (`useForm`, `route()`, validation). Use Catalyst for layout and form UI (`AuthLayout`, `Field`, `Label`, `Input`, `Button`, etc.).
+- **Authenticated shell**: Use `SidebarLayout`, `Navbar`, `Sidebar`, `SidebarItem`, `Dropdown` from Catalyst; see `resources/js/Layouts/AuthenticatedLayout.jsx`.
+- **New pages**: Guest (unauthenticated) pages use `GuestLayout`; dashboard-style pages use `AuthenticatedLayout` and pass optional `header`.
+
+## Vite / Tailwind
+
+- Vite alias: `@/catalyst` → `resources/catalyst-ui-kit/javascript` (must be listed before `@` in `vite.config.js`).
+- Tailwind CSS v4 via `@tailwindcss/vite` in `vite.config.js`; styles in `resources/css/app.css` with `@import 'tailwindcss'`.
+- Catalyst `link.jsx` is customized for Inertia — preserve it when updating the kit from Tailwind Plus.
