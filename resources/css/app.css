@@ -2,5 +2,27 @@
 @plugin '@tailwindcss/forms';
 
 @theme {
-    --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif;
+    --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
+
+    --color-charcoal: #232323;
+    --color-graphite: #3b3f46;
+    --color-bone: #f0f2f4;
+    --color-steel: #7c8793;
+    --color-cobalt: #4b6eaf;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-bone text-charcoal antialiased;
+    }
+
+    .font-display {
+        font-weight: 800;
+        letter-spacing: -0.02em;
+    }
 }

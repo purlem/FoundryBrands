@@ -1,0 +1,145 @@
+---
+description: Experience Foundry brand positioning, voice, and visual identity guardrails. Consult when writing or editing any customer-facing copy, naming sections, or making design/color/type decisions.
+globs:
+alwaysApply: true
+---
+
+# Experience Foundry — Brand Positioning & Identity
+
+Source: "Experience Foundry Branding" deck (Madison Gates / Mpowered Consulting, 06.13.2026) + the strategy email thread that accompanied it.
+Parent company owns Fitness Premier Clubs and Pure Sweat (Sauna) Studios; more brands coming.
+
+## Project context — phased, lean, story-first (from the email thread)
+
+- **Build intentionally, not feature-maximal.** Leadership wants this phased and evolved over time, NOT a big up-front spend. Jason: don't "invest tens of thousands on marketing/website/brand story right now"; deal flow comes through relationships and networking, not a robust marketing engine.
+- **Tighten the story before over-investing in the site.** Madison's repeated guidance: the website is "a little ahead of the story." Favor restraint and clarity over adding more sections/features.
+- **Stakeholders:** Jason Markowicz (principal, Fitness Premier Clubs side) · Madison Gates, Mpowered Consulting (strategy/deck author) · Jillyan (internal site build) · Cassie (involved).
+- **Origin/assets:** domain `experiencefoundrybrands.com` (purchased via GoDaddy); original shell was built on Base44. Pure Sweat live site: puresweatstudios.com.
+
+## Positioning
+
+- **Headline / north star:** "We build brands people belong to."
+- **What it is:** A franchise holding company and operating platform that acquires, strengthens, and scales experience-driven consumer brands through franchising.
+- **Positioning statement:** Experience Foundry acquires, strengthens, and scales experience-driven brands that people don't just use — they belong to.
+- **Core belief:** People don't want more options. They want places they feel part of. (Connection, Routine, Identity, Community, Belonging.)
+- **Founder value prop:** "You built something people love. We help you scale it — without losing what made it special."
+- **Sharpest framing (from strategy email, stronger than the deck):** Experience Foundry should feel like the **infrastructure behind great brands — not another brand competing for attention.** It's a **behavior + experience company**, not a holding company / franchise company / PE group in feel. Reinforces the "show it through design, don't claim it" stance.
+
+## Be clear about the lane — INTERNAL positioning clarity (do NOT display as a we-are/we-are-not list)
+
+This contrast is a team alignment tool, not website copy. A public "we are NOT a PE roll-up / franchise broker / incubator" list reads defensive and violates the "confident, not inflated" voice principle. Express only the POSITIVE identity externally, stated plainly (e.g. the "Where we stand" closer on How We Grow).
+
+**We are (positive identity — OK to express externally, confidently):**
+- A franchise holding company + operating platform
+- An acquisition partner for brands with emotional connection
+- A growth partner for founders ready to scale
+- A curator of modern consumer experiences
+- A systems-driven franchising + operating engine
+
+**We are NOT (INTERNAL ONLY — never list on the site):**
+- Franchise consultants · A traditional private equity roll-up · A passive holding company · A collection of unrelated brands · A franchise broker · An incubator starting every concept from zero
+
+**Simple framing:** Experience is the product. Acquisition + franchising is the growth model.
+
+## Who the marketing site is for — founders/sellers, NOT prospective franchisees
+
+> **Critical positioning (06.26.2026 correction):** The corporate site's *one* converting audience is **founders & sellers** — people who built an experience-driven brand and want a partner to acquire/scale it. **The site is NOT in the business of recruiting franchisees of existing brands — at all.** Experience Foundry works with franchisees operationally, but franchisee recruitment lives entirely at the brand level (e.g. fitnesspremierclubs.com, puresweatstudios.com); the corporate site does not solicit, pitch, OR even route to it. Do not add a "franchise one of our brands" block, a prospective-franchisee CTA, a "be a franchisee" contact option, or any co-equal "two ways to grow" framing. If franchisees ever need a home, it's on the brand sites, not here.
+
+## Value props — customer-facing (the Partner page, founder-first)
+
+Lives on **Partner With Us** (`/partner`), data in `site.js` (`partner`).
+
+- **For Founders & Sellers** (the only Partner audience) — "You built something people love. We help you scale it:" Without losing the soul · With systems and operational expertise · Through franchising + operator support · While preserving what makes it special. Plus "What we look for." No franchisee-facing content of any kind on this page.
+- **For Consumers** (worldview, not a Partner audience) — Brands that create connection · improve daily life · support wellness and longevity · become part of routine and identity. (This belongs on How We Grow's belief opener, not Partner.)
+
+## The model — keep the full model internal, simplify it externally
+
+> Why: the internal model shows rigor. The external model creates clarity.
+
+**Internal Operating System (INTERNAL-ONLY — never put on the website):**
+Identify/Acquire → **Forge** → **Refine** → Scale → **Compound**
+
+The terms **Forge, Refine, Compound** (and "Identify", "Compound" framing) are internal vocabulary.
+Do NOT surface them in customer-facing copy.
+
+**External Website Story (customer-facing — use this version):**
+1. **Acquire what works** — concepts or brands with traction and loyalty
+2. **Strengthen the system** — operations, experience, playbooks
+3. **Scale the right way** — franchising without losing the soul
+
+(Implemented as Find & Acquire → Strengthen the System → Scale Without Losing the Soul in `resources/js/data/site.js`.)
+
+## Name rationale
+
+The name signals great brands are not accidental. Surfaced on How We Grow as the line "Great brands are not accidental." + the supporting sentence.
+
+> The attributes **Crafted, Intentional, Human, Premium, Scalable** are NOT displayed as a labeled grid/list on the site. These are qualities to SHOW through design (type, palette, imagery, restraint), never to claim in copy — stating "we're premium/crafted" undercuts the feeling. Design carries them.
+
+> INTERNAL-ONLY TRANSLATION (do not put on the site): The brand may reference engineering, systems, and acquisitions internally — but externally it must feel crafted, human, and experience-led.
+
+## Brand Voice — how Experience Foundry should sound
+
+**Voice principles:**
+- Crafted, NOT manufactured
+- Premium, NOT exclusive
+- Human, NOT corporate
+- Operator-first, NOT theoretical
+- Confident, NOT inflated
+
+**Say less of:** "Growth Equity" · "Synergies" · "Portfolio Optimizations"
+**Say more of:** Belonging · Routine · Transformation · Community · Identity
+
+**Example copy:**
+- Instead of: "We accelerate scalable portfolio growth."
+- Say: "We help great experiences grow, without losing what made them special."
+
+Avoid generic franchise / VC / consulting / financial-engineering language entirely.
+
+## Visual identity — "Modern Industrial Wellness"
+
+Palette tokens (defined in `resources/css/app.css`):
+
+| Token | Hex | Notes |
+|---|---|---|
+| charcoal | `#232323` | Soft Charcoal — primary text, dark sections |
+| graphite | `#3b3f46` | Warm Graphite — dark gradients pair with charcoal |
+| bone | `#f0f2f4` | Background. NOTE: deviates from deck's warm Bone White `#F3F1EC` per client direction — they wanted a cooler, muted, very light background. Flag on next review. |
+| steel | `#7c8793` | Warm Steel — muted text, labels |
+| cobalt | `#4b6eaf` | Muted Cobalt — the only accent color |
+
+- **Type:** Archivo throughout (the deck's own typeface). Display headlines = Archivo ExtraBold (`.font-display` → weight 800, tight tracking). Body = Archivo regular/light.
+- **Imagery:** Real people, movement, spaces, rituals — cinematic and human (think Equinox, Alo, modern hospitality). Avoid corporate stock and abstract franchise imagery.
+- **Aim for:** Premium, structured, human, trustworthy, cinematic, scalable.
+- **Avoid:** Feminine spa palettes, overly earthy wellness, startup-tech-blue overload, too many colors.
+
+## Content Pillars — how the story comes to life
+
+Feeds website + social + PR + founder outreach + brand storytelling. Use these to theme future content/blog/journal work.
+
+1. **Belonging** — "People need places to belong." → community, testimonials, transformation stories, third-place experiences.
+2. **Wellness + Longevity** — "Movement, recovery, health span." → sauna, recovery, injury comeback stories, aging gracefully, lifestyle wellness.
+3. **Routines + Identity** — "Brands people build into their lives." → habits, routines, consistency, transformation.
+4. **Founder + Operator Stories** — "The builders behind the brands." → founder journeys, leadership POV, scaling lessons, franchise stories, operator success.
+5. **Proven Growth** — "Show proof." → locations, portfolio milestones, expansion, member outcomes, franchisee outcomes.
+
+**Credibility is a priority, not optional (from the email).** The site previously "felt anonymous." Specific proof to surface: # of locations across brands · years of operator/franchise experience · wellness + fitness expertise · growth stories/outcomes. (Leadership/credibility was flagged as a future page — not built yet, but the credibility need stands.)
+
+## Site structure
+
+Nav: How We Grow · Portfolio · Partner With Us · (Get in Touch → Contact). Wordmark links Home. Leadership = future; Investors = off-site.
+
+> **Architecture update (06.26.2026):** "Our Belief" was merged into **How We Grow** — the belonging thesis is now the *why* that opens that page, before the *how* (the model). Per the lean/phased mandate, the once-standalone manifesto didn't warrant its own page once it was stripped to text-first. There is no `/belief` route. How We Grow deliberately carries both jobs (why → how); this is the documented exception to the one-job-per-page rule below.
+
+**Each page has ONE job — no overlap** (except the why→how merge noted above). The model is loosely borrowed from comparable platform franchisors (Xponential, Unleashed, Authority, UFG) — but their sites double as franchisee-recruitment portals; ours does NOT (see "Who the marketing site is for" above). The whole funnel points at one conversion: founders/sellers. Rooted in our facts, not theirs.
+
+- **Home** — *orient & route* (the trailer, not the movie). Hero → belief beat (links /how-we-grow) → portfolio teaser (active + coming-soon → /portfolio) → approach 3-beats (→ /how-we-grow) → proof band → single founder-focused CTA band (`homeCta` → /partner). No two-door/audience-split; the site has one primary audience.
+- **How We Grow** (`/how-we-grow`) — *why we exist + what we do*. Opens with the belonging thesis (manifesto hero "People don't want more options…" → Connection · Routine · Identity · Community resolving into Belonging, text-first, no per-term imagery), then bridges into the model: Why Foundry, Find/Strengthen/Scale, **What we bring** (operating platform grid), signature line "Experience is the product. Acquisition + franchising is the growth model."
+- **Portfolio** (`/portfolio`) — *proof we're real* (reinstated to fix the "feels anonymous" gap). Brand grid (incl. coming-soon) + proof numbers + "what ties them together" → links to How We Grow and Partner. Brand data in `brands.js`.
+- **Partner With Us** (`/partner`) — *the offer + convert*, **founders/sellers only**: the founder/seller pitch (points + "what we look for" + CTA), then a founder-focused close. No franchisee block, no franchise pointer, no "01/02" paths, no "two ways to grow." Data in `site.js` (`partner`).
+- **Contact** (`/contact`) — *start the conversation*; role select is founder-focused only: "I have a brand or concept to scale" / "Something else". No "be a franchisee" option. Validation (`StoreContactRequest`) allows only `founder` and `other`.
+
+Guardrails:
+- The founder line "You built something people love…" lives on **Partner** + the homepage CTA; the "Experience is the product…" line lives on **How We Grow**. Don't duplicate signature lines elsewhere.
+- Do NOT market franchising as a co-equal path on the corporate site. Founders/sellers are the audience; franchisees are routed to brand sites.
+- Don't put two word-grid sections on one page; give big ideas room and context.
+- Cobalt is the sole accent — do not introduce additional colors.

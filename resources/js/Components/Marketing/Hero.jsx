@@ -1,0 +1,67 @@
+import { Link } from '@/catalyst/link';
+import { site } from '@/data/site';
+import { motion } from 'motion/react';
+
+export default function Hero() {
+    return (
+        <section className="relative overflow-hidden bg-charcoal px-6 py-24 sm:py-32 lg:px-8 lg:py-40">
+            <img
+                src="/images/site/hero-sauna.webp"
+                alt=""
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 size-full object-cover opacity-40"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/85 to-charcoal" />
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cobalt/15 via-transparent to-transparent" />
+
+            <div className="relative mx-auto max-w-4xl text-center">
+                <motion.p
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    className="text-sm font-medium uppercase tracking-[0.25em] text-steel"
+                >
+                    Experience Foundry Brands
+                </motion.p>
+
+                <motion.h1
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                    className="font-display mt-6 text-4xl leading-tight tracking-tight text-bone sm:text-5xl lg:text-7xl"
+                >
+                    {site.tagline}
+                </motion.h1>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="mx-auto mt-8 max-w-2xl text-lg leading-relaxed text-steel sm:text-xl"
+                >
+                    {site.description}
+                </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+                >
+                    <Link
+                        href="/portfolio"
+                        className="rounded-full bg-bone px-8 py-3 text-sm font-semibold text-charcoal transition hover:bg-bone/90"
+                    >
+                        Explore the Portfolio
+                    </Link>
+                    <Link
+                        href="/how-we-grow"
+                        className="rounded-full border border-bone/20 px-8 py-3 text-sm font-semibold text-bone transition hover:border-bone/40 hover:bg-bone/5"
+                    >
+                        How We Grow
+                    </Link>
+                </motion.div>
+            </div>
+        </section>
+    );
+}
