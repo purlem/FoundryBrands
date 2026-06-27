@@ -14,12 +14,20 @@ export default function MarketingLayout({ children }) {
 
 export function Wordmark({ className = '' }) {
     return (
-        <Link href="/" className={`group inline-flex flex-col ${className}`}>
-            <span className="font-display text-xl leading-none tracking-tight text-charcoal sm:text-2xl">
-                Experience Foundry
-            </span>
-            <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.2em] text-steel sm:text-xs">
-                Brands
+        <Link href="/" className={`group inline-flex items-center gap-2.5 ${className}`}>
+            <img
+                src="/images/logo/foundry-mark.png"
+                alt=""
+                aria-hidden="true"
+                className="h-9 w-auto sm:h-10"
+            />
+            <span className="inline-flex flex-col">
+                <span className="font-display text-xl leading-none tracking-tight text-charcoal sm:text-2xl">
+                    Experience Foundry
+                </span>
+                <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.2em] text-steel sm:text-xs">
+                    Brands
+                </span>
             </span>
         </Link>
     );

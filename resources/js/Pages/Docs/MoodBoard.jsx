@@ -193,6 +193,15 @@ export default function MoodBoard() {
                         with tight tracking and &ldquo;Brands&rdquo; as a quiet uppercase kicker. The
                         premium signal is restraint, not ornament.
                     </ProposalBox>
+                    <div className="mt-3">
+                        <ProposalBox label="Client direction (06.27.2026)">
+                            The client shared a reference mark: ascending vertical pillars with
+                            chamfered tops, culminating in an upward arrow on the final bar — growth
+                            and momentum without looking like stock art. Section&nbsp;05 includes that
+                            reference plus in-house explorations (07–08) in that territory, adapted to
+                            charcoal + cobalt rather than bronze.
+                        </ProposalBox>
+                    </div>
                     <p className="mt-3 font-mono text-[10px] uppercase tracking-wider text-steel">
                         deliverables
                     </p>
@@ -215,11 +224,44 @@ export default function MoodBoard() {
                 title="Logo concepts — first pass"
                 sub="In-house exploration against the brief above — not final, not commissioned. Each mark is single-color (so it survives reversed + favicon use) with cobalt as the only accent. Shown at full size, reversed on charcoal, at favicon size, and locked up with the Archivo wordmark."
             >
-                <ProposalBox label="Reading these">
-                    These are sketches to react to, not a chosen direction. The goal is to find which
-                    territory feels most like the brand — a literal monogram (01–03), or a more
-                    abstract “experience/platform” glyph (04–06) — before any outside design spend.
-                </ProposalBox>
+                <div className="overflow-hidden rounded-md border border-cobalt/25 bg-white">
+                    <div className="border-b border-cobalt/15 bg-cobalt/5 px-4 py-3">
+                        <p className="font-mono text-[10px] font-semibold uppercase tracking-wider text-cobalt">
+                            Client reference · 06.27.2026
+                        </p>
+                        <p className="mt-1 text-sm leading-relaxed text-graphite">
+                            Ascending pillars with chamfered tops and an upward arrow on the final
+                            bar — growth / scale, geometric and confident. Adapt to our palette
+                            (charcoal + cobalt), not the bronze in the mock.
+                        </p>
+                    </div>
+                    <figure className="grid gap-0 sm:grid-cols-[1fr_auto]">
+                        <img
+                            src="/images/moodboard/client-ref-growth-mark.png"
+                            alt="Client reference: ascending bar mark with upward arrow"
+                            className="aspect-[4/3] w-full object-cover sm:aspect-auto sm:max-h-64"
+                        />
+                        <figcaption className="flex flex-col justify-center border-t border-cobalt/15 p-4 text-[11px] leading-relaxed text-steel sm:border-l sm:border-t-0">
+                            <span className="font-semibold text-charcoal">What to carry forward</span>
+                            <ul className="mt-2 space-y-1">
+                                <li>· Ascending sequence — scale without a literal chart</li>
+                                <li>· Chamfered / milled tops — industrial, not soft</li>
+                                <li>· Arrow on the lead pillar — forward momentum</li>
+                                <li>· Solid silhouette — favicon-ready</li>
+                            </ul>
+                        </figcaption>
+                    </figure>
+                </div>
+
+                <div className="mt-4">
+                    <ProposalBox label="Reading these">
+                        Concepts <strong>07–08</strong> explore the client&rsquo;s reference direction
+                        first. <strong>01–06</strong> are earlier territories (monogram vs. abstract
+                        platform) kept for comparison. React to whether the ascending mark feels on-brand
+                        once locked up with Archivo — or whether a hybrid (ascending bars + subtle
+                        monogram) is the path before any outside design spend.
+                    </ProposalBox>
+                </div>
                 <div className="mt-4">
                     <LogoConcepts />
                 </div>
@@ -238,12 +280,32 @@ export default function MoodBoard() {
                             leans spa/hospitality — the exact direction the deck says to avoid.
                         </ProposalBox>
                     </FieldCard>
-                    <FieldCard label="Logo design" status="open">
+                    <FieldCard label="Logo design" status="resolved">
                         <NoteText>
-                            Brief is ready and a first pass of in-house concepts now sits in section
-                            05 to react to. The interim Archivo text wordmark remains a perfectly
-                            good placeholder; commissioning a designer is a later, optional step.
+                            Direction chosen (06.27.2026): the client selected the ascending
+                            growth mark below. It now ships site-wide — nav, footer, auth screens,
+                            and favicon — locked up with the Archivo &ldquo;Experience Foundry /
+                            Brands&rdquo; wordmark.
                         </NoteText>
+                        <div className="mt-3 flex flex-wrap items-center gap-3">
+                            <span className="flex h-20 w-20 items-center justify-center rounded-md border border-charcoal/10 bg-white p-2">
+                                <img
+                                    src="/images/logo/foundry-mark.png"
+                                    alt="Experience Foundry mark"
+                                    className="max-h-full w-auto"
+                                />
+                            </span>
+                            <span className="flex h-20 w-20 items-center justify-center rounded-md bg-charcoal p-2">
+                                <img
+                                    src="/images/logo/foundry-mark.png"
+                                    alt="Experience Foundry mark, reversed"
+                                    className="max-h-full w-auto brightness-0 invert"
+                                />
+                            </span>
+                            <p className="text-[11px] leading-relaxed text-steel">
+                                Concepts 07–08 below were the in-house exploration that led here.
+                            </p>
+                        </div>
                     </FieldCard>
                 </div>
             </Block>

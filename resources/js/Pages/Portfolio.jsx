@@ -1,4 +1,4 @@
-import { BrandGrid } from '@/Components/Marketing/BrandCard';
+import { BrandSpotlightList } from '@/Components/Marketing/BrandSpotlight';
 import ProofStats from '@/Components/Marketing/ProofStats';
 import MarketingLayout, { PageHeader, Section } from '@/Layouts/MarketingLayout';
 import { Link } from '@/catalyst/link';
@@ -24,7 +24,7 @@ export default function Portfolio() {
             />
 
             <Section>
-                <BrandGrid />
+                <BrandSpotlightList />
             </Section>
 
             <Section className="bg-graphite/5">

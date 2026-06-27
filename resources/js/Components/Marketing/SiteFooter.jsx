@@ -10,7 +10,7 @@ export default function SiteFooter() {
             <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
                 <div className="grid gap-12 md:grid-cols-3">
                     <div>
-                        <Wordmark className="[&_span:first-child]:text-bone [&_span:last-child]:text-steel" />
+                        <Wordmark className="[&_img]:brightness-0 [&_img]:invert [&_span:first-child]:text-bone [&_span:last-child]:text-steel" />
                         <p className="mt-4 max-w-xs text-sm leading-relaxed text-steel">
                             {site.description}
                         </p>

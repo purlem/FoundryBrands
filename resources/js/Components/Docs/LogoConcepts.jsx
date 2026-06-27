@@ -2,6 +2,40 @@
 // Every mark is a single-color SVG (fill: currentColor) so it survives one-color,
 // reversed, and favicon use. Cobalt is the sole accent, used on at most one element.
 
+function MarkAscend({ className = '', accentClassName = 'text-cobalt' }) {
+    // Client direction — three ascending pillars with chamfered (milled) tops, the
+    // fourth resolving into an up-right arrow. Growth / momentum, industrial not financial.
+    return (
+        <svg viewBox="0 0 48 48" className={className} fill="currentColor" aria-hidden="true">
+            <path d="M4 42V30L10 25V42H4Z" />
+            <path d="M13 42V24L19 19V42H13Z" />
+            <path d="M22 42V18L28 13V42H22Z" />
+            <g className={accentClassName}>
+                <path d="M33 42V18H39V42H33Z" />
+                <path d="M32 20L46 6L41 24L32 20Z" />
+            </g>
+        </svg>
+    );
+}
+
+function MarkAscendFoundry({ className = '', accentClassName = 'text-cobalt' }) {
+    // Client direction, folded-ribbon variant — one continuous angular stroke zig-zags
+    // upward (echoing the folded-metal facets of the reference) and ends in an arrow.
+    return (
+        <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
+            <path
+                d="M4 42L11 23L18 42L25 15L32 42L40 9"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="5"
+                strokeLinejoin="miter"
+                strokeLinecap="butt"
+            />
+            <path d="M33 14L46 4L41 21L33 14Z" fill="currentColor" className={accentClassName} />
+        </svg>
+    );
+}
+
 function MarkForgedF({ className = '' }) {
     // Concept 01 — a squared "F" (Foundry) with a 45° chamfer cut on the top-right
     // corner, so it reads as cast / milled metal rather than a typeface glyph.
@@ -95,6 +129,22 @@ function MarkSpark({ className = '', accentClassName = 'text-cobalt' }) {
 
 const concepts = [
     {
+        id: '07',
+        name: 'Ascend',
+        mark: MarkAscend,
+        clientDirection: true,
+        idea: 'Closest to the client reference — three chamfered pillars stepping up, the fourth resolving into a cobalt up-right arrow. Solid silhouette, favicon-ready; growth without the stock-chart cliché.',
+        watch: 'Make sure it doesn’t read “corporate finance” once paired with the wordmark — the milled/chamfered tops are what keep it on-brand.',
+    },
+    {
+        id: '08',
+        name: 'Ascend — folded',
+        mark: MarkAscendFoundry,
+        clientDirection: true,
+        idea: 'The same ascent drawn as one continuous folded-ribbon stroke that zig-zags up and ends in an arrow — leans into the faceted, folded-metal feel of the reference.',
+        watch: 'Stroke weight needs a min-size floor; thinner than 07 so test it at 16px before committing.',
+    },
+    {
         id: '01',
         name: 'Forged F',
         mark: MarkForgedF,
@@ -164,11 +214,23 @@ function Lockup({ Mark, reversed = false }) {
 export default function LogoConcepts() {
     return (
         <div className="space-y-4">
-            {concepts.map(({ id, name, mark: Mark, idea, watch }) => (
-                <div key={id} className="rounded-md border border-charcoal/15 bg-white/70 p-4">
-                    <div className="flex items-baseline gap-2">
+            {concepts.map(({ id, name, mark: Mark, idea, watch, clientDirection }) => (
+                <div
+                    key={id}
+                    className={`rounded-md border bg-white/70 p-4 ${
+                        clientDirection
+                            ? 'border-cobalt/35 ring-1 ring-cobalt/10'
+                            : 'border-charcoal/15'
+                    }`}
+                >
+                    <div className="flex flex-wrap items-baseline gap-2">
                         <span className="font-mono text-[11px] font-medium text-cobalt">{id}</span>
                         <h3 className="text-sm font-semibold text-charcoal">{name}</h3>
+                        {clientDirection && (
+                            <span className="rounded-[2px] bg-cobalt/10 px-1.5 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-cobalt">
+                                Client direction
+                            </span>
+                        )}
                     </div>
 
                     <div className="mt-3 grid gap-3 sm:grid-cols-[auto_1fr]">
