@@ -23,7 +23,7 @@ export function Wordmark({ className = '' }) {
             />
             <span className="inline-flex flex-col">
                 <span className="font-display text-xl leading-none tracking-tight text-charcoal sm:text-2xl">
-                    Experience Foundry
+                    Foundry
                 </span>
                 <span className="mt-0.5 text-[10px] font-medium uppercase tracking-[0.2em] text-steel sm:text-xs">
                     Brands

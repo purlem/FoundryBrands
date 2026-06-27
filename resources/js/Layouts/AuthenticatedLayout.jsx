@@ -57,7 +57,7 @@ function AccountDropdownMenu({ anchor }) {
 
 export default function AuthenticatedLayout({ header, children }) {
     const user = usePage().props.auth.user;
-    const appName = import.meta.env.VITE_APP_NAME || 'StartHere';
+    const appName = import.meta.env.VITE_APP_NAME || 'Foundry Brand';
     const isDashboard = route().current('dashboard');
     const isProfile = route().current('profile.edit');
 

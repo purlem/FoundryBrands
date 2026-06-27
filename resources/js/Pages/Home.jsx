@@ -12,8 +12,8 @@ export default function Home() {
         <MarketingLayout>
             <Head title={site.tagline}>
                 <meta head-key="description" name="description" content={site.description} />
-                <meta property="og:title" content={`${site.name} — ${site.tagline}`} />
-                <meta property="og:description" content={site.description} />
+                <meta head-key="og:title" property="og:title" content={`${site.name} — ${site.tagline}`} />
+                <meta head-key="og:description" property="og:description" content={site.description} />
             </Head>
 
             <Hero />
