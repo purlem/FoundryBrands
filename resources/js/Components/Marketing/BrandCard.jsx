@@ -1,4 +1,5 @@
 import { brands } from '@/data/brands';
+import { RevealStagger, RevealItem } from '@/Components/Marketing/Reveal';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
 export default function BrandCard({ brand, featured = false }) {
@@ -95,11 +96,13 @@ export function BrandGrid({ limit, showComingSoon = true }) {
     const display = limit ? items.slice(0, limit) : items;
 
     return (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <RevealStagger className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {display.map((brand) => (
-                <BrandCard key={brand.slug} brand={brand} featured={brand.status === 'active'} />
+                <RevealItem key={brand.slug} className="h-full">
+                    <BrandCard brand={brand} featured={brand.status === 'active'} />
+                </RevealItem>
             ))}
-        </div>
+        </RevealStagger>
     );
 }
 
@@ -107,7 +110,7 @@ export function BrandsSection() {
     return (
         <div>
             <div className="mx-auto max-w-2xl text-center">
-                <p className="text-sm font-medium uppercase tracking-[0.2em] text-cobalt">
+                <p className="text-sm font-medium uppercase tracking-[0.2em] text-coral">
                     Our Portfolio
                 </p>
                 <h2 className="font-display mt-4 text-3xl tracking-tight text-charcoal sm:text-4xl">

@@ -71,8 +71,15 @@ export default function Partner() {
                 </div>
             </Section>
 
-            <Section className="bg-gradient-to-br from-graphite to-charcoal">
-                <div className="mx-auto max-w-3xl text-center">
+            <Section className="relative overflow-hidden bg-charcoal">
+                <img
+                    src="/images/moodboard/connection.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 size-full object-cover opacity-35"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-charcoal/80 via-charcoal/85 to-charcoal/95" />
+                <div className="relative mx-auto max-w-3xl text-center">
                     <p className="font-display text-2xl leading-snug text-bone sm:text-3xl">
                         {close}
                     </p>

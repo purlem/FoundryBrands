@@ -1,4 +1,5 @@
 import LogoConcepts from '@/Components/Docs/LogoConcepts';
+import LogoConceptsExperience from '@/Components/Docs/LogoConceptsExperience';
 import { StatusBadge } from '@/Components/Docs/Status';
 import { Block, FieldCard, NoteText, ProposalBox } from '@/Components/Docs/Worksheet';
 import DocsLayout from '@/Layouts/DocsLayout';
@@ -267,7 +268,26 @@ export default function MoodBoard() {
                 </div>
             </Block>
 
-            <Block index="06" title="Decisions on this page">
+            <Block
+                index="06"
+                title="Logo concepts — round 2 · experience"
+                sub="In response to the 06.30 feedback: the chosen mark reads as structure, but not yet as experience, movement, or human connection. These four keep the forged / chamfered language and the cobalt accent, but each adds one element of motion or warmth — and moves the accent onto that human note rather than a finance-style arrow."
+            >
+                <div className="mb-4">
+                    <ProposalBox label="What changed">
+                        The first pass honored <strong>Foundry</strong> (structure, milled metal,
+                        upward growth) but left <strong>Experience</strong> unspoken. Each mark below
+                        pairs the same industrial structure with a single gesture of movement or
+                        connection — a rising path (<strong>09</strong>), a cradled spark
+                        (<strong>10</strong>), an open frame people step into (<strong>11</strong>),
+                        or a meeting point (<strong>12</strong>). <strong>09 (Ascend · Arc)</strong> is
+                        the lowest-risk evolution of the already-approved mark.
+                    </ProposalBox>
+                </div>
+                <LogoConceptsExperience />
+            </Block>
+
+            <Block index="07" title="Decisions on this page">
                 <div className="space-y-3">
                     <FieldCard label="Bone background deviation" status="proposed">
                         <NoteText>

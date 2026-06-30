@@ -1,8 +1,12 @@
 export const site = {
     name: 'Experience Foundry',
     tagline: 'We build brands people belong to.',
+    // Hero subheadline — leads with the lived experience, not the business model.
+    heroSubhead:
+        'We grow the kind of brands people build their lives around — the gym where everyone knows your name, the studio that becomes the hour you protect. Experience Foundry helps experience-driven brands reach more people, without losing what made them feel like home.',
+    // Shorter line for SEO/OG meta tags.
     description:
-        'Experience Foundry acquires and scales experience-driven brands designed around connection, routine, and identity — powered by franchising, systems, and operators.',
+        'Experience Foundry grows brands people build their lives around — experience-driven gyms, studios, and wellness brands designed around connection, routine, and belonging.',
     url: 'https://experiencefoundrybrands.com',
 };
 
@@ -106,7 +110,7 @@ export const approach = {
 export const portfolio = {
     eyebrow: 'Our Portfolio',
     title: 'Brands people belong to.',
-    intro: 'Experience-driven brands with emotional connection at their core — built around wellness, movement, recovery, and community. Each keeps its own identity and team; together they share an operating platform built to scale.',
+    intro: 'Brands people build into their lives — gyms, studios, and wellness spaces where showing up becomes a habit, a community, and part of who you are. Each keeps its own identity and team; together they share an operating platform built to scale.',
     tie: {
         title: 'What ties them together',
         body: 'Every brand in the Foundry is a place people build into their lives — not a transaction, but a routine, an identity, and a community. That shared thesis is what we look for, and what we protect as we grow.',

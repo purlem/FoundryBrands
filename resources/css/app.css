@@ -5,11 +5,13 @@
     --font-sans: 'Archivo', ui-sans-serif, system-ui, sans-serif;
     --font-display: 'Archivo', ui-sans-serif, system-ui, sans-serif;
 
-    --color-charcoal: #232323;
+    --color-charcoal: #232326;
     --color-graphite: #3b3f46;
     --color-bone: #f0f2f4;
-    --color-steel: #7c8793;
+    --color-steel: #837f78;
     --color-cobalt: #4b6eaf;
+    --color-marigold: #eaa23f;
+    --color-coral: #e2724a;
 }
 
 @layer base {

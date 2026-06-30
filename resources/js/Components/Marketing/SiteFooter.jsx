@@ -67,7 +67,7 @@ export default function SiteFooter() {
                     <p className="text-sm text-steel">
                         &copy; {year} {site.name}. All rights reserved.
                     </p>
-                    <Link href="/contact" className="text-sm text-cobalt transition hover:text-bone">
+                    <Link href="/contact" className="text-sm text-marigold transition hover:text-bone">
                         Contact us
                     </Link>
                 </div>

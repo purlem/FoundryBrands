@@ -131,8 +131,15 @@ export default function HowWeGrow() {
                 </figure>
             </Section>
 
-            <Section className="bg-gradient-to-br from-graphite to-charcoal">
-                <div className="mx-auto max-w-3xl text-center">
+            <Section className="relative overflow-hidden bg-charcoal">
+                <img
+                    src="/images/moodboard/strength.jpg"
+                    alt=""
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 size-full object-cover opacity-30"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-charcoal/80 via-charcoal/85 to-charcoal/95" />
+                <div className="relative mx-auto max-w-3xl text-center">
                     <p className="text-sm font-medium uppercase tracking-[0.2em] text-steel">
                         Where we stand
                     </p>

@@ -1,3 +1,4 @@
+import Portrait from '@/Components/Marketing/Portrait';
 import { brands } from '@/data/brands';
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 
@@ -5,7 +6,7 @@ function ChapterHeader({ brand, number }) {
     return (
         <div className="border-t border-charcoal/15 pt-8">
             <div className="flex items-baseline gap-4">
-                <span className="font-display text-sm tabular-nums text-cobalt">{number}</span>
+                <span className="font-display text-sm tabular-nums text-marigold">{number}</span>
                 <span className="text-xs font-medium uppercase tracking-[0.2em] text-steel">
                     {brand.category}
                 </span>
@@ -84,7 +85,7 @@ export default function BrandSpotlight({ brand, index = 0 }) {
                             href={brand.url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cobalt transition hover:text-charcoal"
+                            className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cobalt transition hover:text-coral"
                         >
                             Visit site
                             <ArrowTopRightOnSquareIcon className="size-4" />
@@ -95,11 +96,41 @@ export default function BrandSpotlight({ brand, index = 0 }) {
                 <div className={`lg:col-span-7 ${reversed ? 'lg:order-1' : 'lg:order-2'}`}>
                     <p className="text-xl leading-relaxed text-charcoal">{brand.description}</p>
 
+                    {detail?.experience && (
+                        <figure className="mt-8 border-l-2 border-coral/50 pl-6">
+                            <figcaption className="text-xs font-medium uppercase tracking-[0.2em] text-coral">
+                                {detail.experience.eyebrow}
+                            </figcaption>
+                            <blockquote className="font-display mt-4 text-2xl leading-snug tracking-tight text-charcoal sm:text-[1.75rem]">
+                                {detail.experience.body}
+                            </blockquote>
+                        </figure>
+                    )}
+
                     {detail?.story && (
                         <div className="mt-8 border-t border-charcoal/10 pt-8">
                             <p className="text-xs font-medium uppercase tracking-[0.2em] text-cobalt">
                                 {detail.story.eyebrow}
                             </p>
+
+                            {detail.story.founder && (
+                                <div className="mt-5 flex items-center gap-4">
+                                    <Portrait
+                                        src={detail.story.founder.portrait}
+                                        name={detail.story.founder.name}
+                                        className="size-14 shrink-0"
+                                    />
+                                    <div>
+                                        <p className="font-display text-lg text-charcoal">
+                                            {detail.story.founder.name}
+                                        </p>
+                                        <p className="mt-0.5 text-sm text-steel">
+                                            {detail.story.founder.role}
+                                        </p>
+                                    </div>
+                                </div>
+                            )}
+
                             <div className="mt-5 space-y-5">
                                 {detail.story.paragraphs.map((paragraph) => (
                                     <p
@@ -116,16 +147,20 @@ export default function BrandSpotlight({ brand, index = 0 }) {
                     {detail?.gallery && (
                         <div className="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
                             {detail.gallery.map((image) => (
-                                <div
-                                    key={image.src}
-                                    className="relative aspect-[4/3] overflow-hidden rounded-xl bg-charcoal"
-                                >
-                                    <img
-                                        src={image.src}
-                                        alt={image.alt}
-                                        className="size-full object-cover"
-                                    />
-                                </div>
+                                <figure key={image.src} className="group">
+                                    <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-charcoal">
+                                        <img
+                                            src={image.src}
+                                            alt={image.alt}
+                                            className="size-full object-cover"
+                                        />
+                                    </div>
+                                    {image.caption && (
+                                        <figcaption className="mt-2 text-xs leading-snug text-steel">
+                                            {image.caption}
+                                        </figcaption>
+                                    )}
+                                </figure>
                             ))}
                         </div>
                     )}
@@ -137,7 +172,7 @@ export default function BrandSpotlight({ brand, index = 0 }) {
 
 export function BrandSpotlightList() {
     return (
-        <div className="space-y-24 sm:space-y-28 lg:space-y-36">
+        <div className="space-y-16 sm:space-y-20 lg:space-y-24">
             {brands.map((brand, index) => (
                 <BrandSpotlight key={brand.slug} brand={brand} index={index} />
             ))}

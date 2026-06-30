@@ -35,7 +35,7 @@ export default function SiteNav() {
                     ))}
                     <Link
                         href="/contact"
-                        className="rounded-full bg-charcoal px-5 py-2 text-sm font-medium text-bone transition hover:bg-graphite"
+                        className="rounded-full bg-charcoal px-5 py-2 text-sm font-medium text-bone transition hover:bg-coral"
                     >
                         Get in Touch
                     </Link>

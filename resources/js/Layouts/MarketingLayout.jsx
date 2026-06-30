@@ -36,7 +36,7 @@ export function Wordmark({ className = '' }) {
 export function PageHeader({ eyebrow, title, description, dark = false }) {
     return (
         <div
-            className={`px-6 py-16 sm:py-24 lg:px-8 ${
+            className={`px-6 py-12 sm:py-16 lg:px-8 ${
                 dark ? 'bg-charcoal text-bone' : 'bg-bone text-charcoal'
             }`}
         >
@@ -69,7 +69,7 @@ export function PageHeader({ eyebrow, title, description, dark = false }) {
 
 export function Section({ children, className = '', id }) {
     return (
-        <section id={id} className={`px-6 py-16 sm:py-24 lg:px-8 ${className}`}>
+        <section id={id} className={`px-6 py-12 sm:py-16 lg:px-8 ${className}`}>
             <div className="mx-auto max-w-7xl">{children}</div>
         </section>
     );
