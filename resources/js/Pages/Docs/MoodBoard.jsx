@@ -310,14 +310,14 @@ export default function MoodBoard() {
                         <div className="mt-3 flex flex-wrap items-center gap-3">
                             <span className="flex h-20 w-20 items-center justify-center rounded-md border border-charcoal/10 bg-white p-2">
                                 <img
-                                    src="/images/logo/foundry-mark.png"
+                                    src="/images/logo/logo_color.svg"
                                     alt="Experience Foundry mark"
                                     className="max-h-full w-auto"
                                 />
                             </span>
                             <span className="flex h-20 w-20 items-center justify-center rounded-md bg-charcoal p-2">
                                 <img
-                                    src="/images/logo/foundry-mark.png"
+                                    src="/images/logo/logo_bw.svg"
                                     alt="Experience Foundry mark, reversed"
                                     className="max-h-full w-auto brightness-0 invert"
                                 />

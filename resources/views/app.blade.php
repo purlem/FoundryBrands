@@ -13,7 +13,7 @@
         @endphp
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="/images/logo/foundry-mark.png">
+        <link rel="icon" type="image/svg+xml" href="/images/logo/logo_color.svg">
         <link rel="apple-touch-icon" href="/images/logo/foundry-mark.png">
 
         <!-- Open Graph / link previews (SMS, iMessage, social) -->

@@ -16,7 +16,7 @@ export function Wordmark({ className = '' }) {
     return (
         <Link href="/" className={`group inline-flex items-center gap-2.5 ${className}`}>
             <img
-                src="/images/logo/foundry-mark.png"
+                src="/images/logo/logo_color.svg"
                 alt=""
                 aria-hidden="true"
                 className="h-9 w-auto sm:h-10"
